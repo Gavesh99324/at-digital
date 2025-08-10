@@ -22,35 +22,37 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="w-[846px] flex flex-col gap-[28px] mx-auto mt-12 mb-12">
-      <h2 className="w-[389px] h-[33px] font-poppins font-semibold text-[27px] leading-[33px] tracking-[0.4px] text-[#4F46E5] mx-auto text-center">
+    <div className="w-full max-w-[846px] flex flex-col gap-7 mx-auto mt-12 mb-12 px-4">
+      <h2 className="max-w-[389px] font-poppins font-semibold text-[22px] sm:text-[27px] leading-[28px] sm:leading-[33px] tracking-[0.4px] text-[#4F46E5] mx-auto text-center">
         Frequently asked questions
       </h2>
 
       {faqs.map((faq, index) => (
         <div
           key={index}
-          className={`w-[846px] ${
-            openIndex === index ? "h-[149px]" : "h-[76px]"
-          } rounded-[7px] p-[24px] flex flex-col gap-[13px] transition-all duration-300
-          ${
-            openIndex === index
-              ? "bg-[#FAF8FF] text-[#6F6C90]"
-              : "bg-white text-black border border-gray-200"
-          }`}
+          className={`
+            w-full rounded-[7px] p-6 flex flex-col gap-3 transition-all duration-300
+            ${
+              openIndex === index
+                ? "bg-[#FAF8FF] text-[#6F6C90]"
+                : "bg-white text-black border border-gray-200"
+            }
+          `}
         >
           <button
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
             className="flex justify-between items-center w-full text-left"
           >
-            <span className="w-[744px] font-inter font-medium text-[22px] leading-[28px]">
+            <span className="font-inter font-medium text-lg sm:text-[22px] leading-[26px] sm:leading-[28px] pr-4">
               {faq.question}
             </span>
-            <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
+            <span className="text-xl flex-shrink-0">
+              {openIndex === index ? "−" : "+"}
+            </span>
           </button>
 
           {openIndex === index && faq.answer && (
-            <p className="w-[798px] font-inter font-normal text-[18px] leading-[30px]">
+            <p className="font-inter font-normal text-base sm:text-[18px] leading-[26px] sm:leading-[30px]">
               {faq.answer}
             </p>
           )}

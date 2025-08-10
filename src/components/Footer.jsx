@@ -2,27 +2,27 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#4F46E5] px-[80px] pt-[40px] pb-[20px] flex flex-col gap-[40px] items-center">
-      <div className="w-full max-w-[1200px] h-[141px] flex justify-between">
-        <div className="flex flex-col gap-[14px] w-[300px]">
+    <footer className="w-full bg-[#4F46E5] px-6 sm:px-10 lg:px-[80px] pt-10 pb-5 flex flex-col gap-10 items-center">
+      <div className="w-full max-w-[1200px] flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-0">
+        <div className="flex flex-col gap-4 max-w-[300px] text-center lg:text-left mx-auto lg:mx-0">
           <img
             src="/logo.png"
             alt="AT Digital Logo"
-            className="w-[226px] h-[49.62px] object-contain"
+            className="w-[180px] sm:w-[226px] h-auto object-contain mx-auto lg:mx-0"
           />
-          <p className="font-lato font-normal text-[16px] leading-[100%] text-white">
+          <p className="font-lato font-normal text-sm sm:text-base leading-snug text-white">
             Your goal is our target. Not anything in between. We use online
-            marketing platforms and tools to achieve single objective - your
+            marketing platforms and tools to achieve single objective – your
             business results.
           </p>
         </div>
 
-        <div className="flex gap-[80px]">
+        <div className="flex flex-col sm:flex-row gap-10 sm:gap-20 text-center sm:text-left justify-center lg:justify-start">
           <div>
-            <h3 className="font-inter font-semibold text-[21px] text-white">
+            <h3 className="font-inter font-semibold text-lg sm:text-[21px] text-white">
               Our Technologies
             </h3>
-            <ul className="flex flex-col gap-[12px] mt-[12px] text-white font-inter text-[16px]">
+            <ul className="flex flex-col gap-3 mt-3 text-white font-inter text-sm sm:text-base">
               <li>ReactJS</li>
               <li>Gatsby</li>
               <li>NextJS</li>
@@ -31,10 +31,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-inter font-semibold text-[21px] text-white">
+            <h3 className="font-inter font-semibold text-lg sm:text-[21px] text-white">
               Our Services
             </h3>
-            <ul className="flex flex-col gap-[12px] mt-[12px] text-white font-inter text-[16px]">
+            <ul className="flex flex-col gap-3 mt-3 text-white font-inter text-sm sm:text-base">
               <li>Social Media Marketing</li>
               <li>Web &amp; Mobile App Development</li>
               <li>Data &amp; Analytics</li>
@@ -43,10 +43,10 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="w-[630px] flex justify-center border-t border-white pt-[8px]">
-        <div className="flex gap-[16px] font-inter font-medium text-[14px] text-white capitalize">
+      <div className="w-full max-w-[630px] flex justify-center border-t border-white pt-2">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 font-inter font-medium text-xs sm:text-sm text-white capitalize">
           <a href="https://example.com">Privacy Policy</a>
-          <p>|</p>
+          <span>|</span>
           <a href="https://example.com">Terms &amp; Conditions</a>
         </div>
       </div>
