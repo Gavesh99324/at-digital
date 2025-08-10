@@ -5,41 +5,37 @@ export default function Navbar() {
   return (
     <>
       <nav className="w-full h-[101.62px] bg-[#4F46E5] flex justify-between items-center px-[80px] pt-[26px] pb-[26px]">
-      
-      {/* Logo Section */}
-      <div className="flex items-center gap-[14px] w-[226px] h-[49.62px]">
-        <div className="bg-white p-[8px] rounded">
-          <span className="text-blue-700 font-bold text-xl">♦</span>
+        <div className="flex items-center gap-[14px] w-[226px] h-[49.62px]">
+          <div className="bg-white p-[8px] rounded">
+            <span className="text-blue-700 font-bold text-xl">♦</span>
+          </div>
+          <span className="font-bold text-lg text-white">at digital</span>
         </div>
-        <span className="font-bold text-lg text-white">at digital</span>
-      </div>
 
-      {/* Navigation Links */}
-      <ul className="flex gap-[28px] w-[381px] h-[17px] uppercase font-medium text-white text-[14px] leading-[100%]">
-        <li>
-          <a href="#services" className="hover:underline">
-            Services
-          </a>
-        </li>
-        <li>
-          <a href="#about" className="hover:underline">
-            About Us
-          </a>
-        </li>
-        <li>
-          <a href="#contact" className="hover:underline">
-            Contact Us
-          </a>
-        </li>
-        <li>
-          <a href="#careers" className="hover:underline">
-            Careers
-          </a>
-        </li>
-      </ul>
-    </nav>
+        <ul className="flex gap-[28px] w-[381px] h-[17px] uppercase font-medium text-white text-[14px] leading-[100%]">
+          <li>
+            <a href="#services" className="hover:underline">
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#about" className="hover:underline">
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:underline">
+              Contact Us
+            </a>
+          </li>
+          <li>
+            <a href="#careers" className="hover:underline">
+              Careers
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-      {/* Relative container for image and frame */}
       <div className="relative w-full h-[763px] mt-0">
         <img
           src="/table.jpg"
@@ -47,7 +43,6 @@ export default function Navbar() {
           className="w-full h-full object-cover"
         />
 
-        {/* Frame positioned on left bottom of the image */}
         <div
           style={{
             width: "630px",
@@ -66,9 +61,9 @@ export default function Navbar() {
             position: "absolute",
             bottom: 0,
             left: 0,
-            marginBottom: "16px", // optional spacing from bottom
-            marginLeft: "16px", // optional spacing from left
-            borderRadius: "8px", // rounded corners if you want
+            marginBottom: "16px",
+            marginLeft: "16px",
+            borderRadius: "8px",
           }}
         >
           <p
@@ -96,13 +91,11 @@ export default function Navbar() {
               width: "556px",
               height: "192px",
               opacity: 1,
-              backgroundColor: "rgba(255, 255, 255, 0.15)", // softened white overlay for contrast
+              backgroundColor: "rgba(255, 255, 255, 0.15)",
               marginTop: "20px",
               borderRadius: "8px",
             }}
-          >
-            {/* Layout box content */}
-          </div>
+          ></div>
         </div>
       </div>
     </>
